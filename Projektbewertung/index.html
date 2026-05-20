@@ -1,1 +1,827 @@
 
+<!DOCTYPE html>
+<html lang="de" xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EWV OneAI – Executive Use Case Landscape</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<style>
+
+* {
+    box-sizing:border-box;
+}
+
+body {
+    margin:0;
+    font-family:Inter,sans-serif;
+    background:#f5f8f4;
+    color:#1f2937;
+}
+
+.hero {
+    background:
+        radial-gradient(circle at top right, rgba(255,255,255,0.12), transparent 28%),
+        linear-gradient(135deg,#005c36,#7db928);
+    color:white;
+    padding:90px 70px 110px;
+}
+
+.hero h1 {
+    margin:0;
+    font-size:64px;
+    font-weight:700;
+    letter-spacing:-2px;
+}
+
+.hero p {
+    max-width:900px;
+    margin-top:20px;
+    line-height:1.8;
+    font-size:19px;
+    opacity:0.95;
+}
+
+.main {
+    padding:0 40px 50px;
+    margin-top:-55px;
+}
+
+.kpi-grid {
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    gap:24px;
+}
+
+.kpi-card {
+    background:white;
+    border-radius:30px;
+    padding:30px;
+    box-shadow:0 20px 40px rgba(0,0,0,0.08);
+    backdrop-filter:blur(10px);
+}
+
+.kpi-card span {
+    color:#64748b;
+    font-size:14px;
+}
+
+.kpi {
+    font-size:54px;
+    font-weight:700;
+    margin-top:10px;
+    color:#006b3f;
+}
+
+.section {
+    margin-top:34px;
+}
+
+.panel {
+    background:white;
+    border-radius:34px;
+    padding:34px;
+    box-shadow:0 18px 38px rgba(0,0,0,0.06);
+}
+
+.panel h2 {
+    margin-top:0;
+    font-size:32px;
+    color:#006b3f;
+}
+
+.panel p {
+    color:#64748b;
+    line-height:1.7;
+}
+
+.landscape {
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:18px;
+    margin-top:28px;
+}
+
+.usecase {
+    background:#f8fbf7;
+    border-radius:22px;
+    padding:18px;
+    border:1px solid rgba(0,107,63,0.08);
+    transition:0.22s;
+}
+
+.usecase:hover {
+    transform:translateY(-4px);
+    box-shadow:0 14px 28px rgba(0,0,0,0.08);
+}
+
+.usecase h3 {
+    margin:14px 0 8px;
+    font-size:18px;
+    color:#0f172a;
+}
+
+.usecase p {
+    font-size:14px;
+    line-height:1.6;
+    color:#64748b;
+    margin-bottom:16px;
+}
+
+.badge {
+    display:inline-block;
+    padding:5px 11px;
+    border-radius:18px;
+    background:#e6f2df;
+    color:#006b3f;
+    font-size:11px;
+    font-weight:600;
+    margin-right:6px;
+}
+
+.metrics {
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+}
+
+.metric {
+    background:white;
+    border-radius:14px;
+    padding:10px 12px;
+    font-size:12px;
+    border:1px solid rgba(0,0,0,0.05);
+    flex:1;
+    min-width:90px;
+}
+
+.metric strong {
+    display:block;
+    margin-top:4px;
+    color:#006b3f;
+    font-size:18px;
+}
+
+.footer {
+    padding:40px;
+    text-align:center;
+    color:#94a3b8;
+    font-size:14px;
+}
+
+canvas {
+    margin-top:24px;
+}
+
+@media(max-width:900px){
+    .hero {
+        padding:60px 30px 90px;
+    }
+
+    .hero h1 {
+        font-size:42px;
+    }
+
+    .main {
+        padding:0 18px 40px;
+    }
+}
+
+</style>
+
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:_dlc_DocId msdt:dt="string">A52FXUC2W4AK-226576097-6855</mso:_dlc_DocId>
+<mso:_dlc_DocIdItemGuid msdt:dt="string">bd122ce9-0e88-49aa-8a80-2cfee0a64301</mso:_dlc_DocIdItemGuid>
+<mso:_dlc_DocIdUrl msdt:dt="string">https://ewvcloud.sharepoint.com/sites/A_G-I_Teams/_layouts/15/DocIdRedir.aspx?ID=A52FXUC2W4AK-226576097-6855, A52FXUC2W4AK-226576097-6855</mso:_dlc_DocIdUrl>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+
+<body>
+
+<div class="hero">
+
+    <h1>EWV OneAI</h1>
+
+    <p>
+        Strategische Executive-Landscape der identifizierten AI- und Digitalisierungs-Use-Cases.
+        Die Darstellung fokussiert Business Value, technische Umsetzbarkeit,
+        Komplexität und strategischen Impact innerhalb der zukünftigen OneAI Zielarchitektur.
+    </p>
+
+</div>
+
+<div class="main">
+
+    <div class="kpi-grid">
+
+        <div class="kpi-card">
+            <span>Use Cases</span>
+            <div class="kpi">16</div>
+        </div>
+
+        <div class="kpi-card">
+            <span>Ø Machbarkeit</span>
+            <div class="kpi">49%</div>
+        </div>
+
+        <div class="kpi-card">
+            <span>Strategische High-Value Cases</span>
+            <div class="kpi">6</div>
+        </div>
+
+        <div class="kpi-card">
+            <span>AI & Automation Fokus</span>
+            <div class="kpi">OneAI</div>
+        </div>
+
+    </div>
+
+    <div class="section panel">
+
+        <h2>Portfolio Bubble Landscape</h2>
+
+        <p>
+            Visualisierung der Use Cases anhand von Business Value und technischer Komplexität.
+            Die Bubble-Größe repräsentiert die strategische Machbarkeit.
+        </p>
+
+        <canvas id="bubbleChart" height="110"></canvas>
+
+    </div>
+
+    <div class="section panel">
+
+        <h2>Use Case Portfolio</h2>
+
+        <div class="landscape">
+
+        <div class="usecase">
+
+            <div class="badge">B.05</div>
+
+            <h3>Automatisierte E-Mail-Klassifizierung & -Verteilung</h3>
+
+            <p>Analysiert eingehende E-Mails im zentralen Postfach, klassifiziert das Anliegen (z.B. Vertragsfrage, Beschwerde) und leitet die E-Mail automatisch an das zuständige Team weiter.</p>
+
+            <div class="metrics">
+
+                <div class="metric">
+                    Business
+                    <strong>72</strong>
+                </div>
+
+                <div class="metric">
+                    Komplexität
+                    <strong>34</strong>
+                </div>
+
+                <div class="metric">
+                    Machbarkeit
+                    <strong>90%</strong>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="usecase">
+
+            <div class="badge">B.04</div>
+
+            <h3>KI-gestütztes internes Wissensmanagement</h3>
+
+            <p>Ein intelligenter Assistent ermöglicht Mitarbeitern (insb. im Call-Center) die schnelle und einfache Suche nach Informationen in internen Dokumenten (Anweisungen, Verträge, Prozess</p>
+
+            <div class="metrics">
+
+                <div class="metric">
+                    Business
+                    <strong>72</strong>
+                </div>
+
+                <div class="metric">
+                    Komplexität
+                    <strong>50</strong>
+                </div>
+
+                <div class="metric">
+                    Machbarkeit
+                    <strong>60%</strong>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="usecase">
+
+            <div class="badge">B.01</div>
+
+            <h3>Real-Time Agent Assist im Call-Center</h3>
+
+            <p>Unterstützt Call-Center-Agenten während des Gesprächs in Echtzeit mit relevanten Informationen, Antworten und Handlungsempfehlungen aus dem internen Wissensmanagement.</p>
+
+            <div class="metrics">
+
+                <div class="metric">
+                    Business
+                    <strong>72</strong>
+                </div>
+
+                <div class="metric">
+                    Komplexität
+                    <strong>66</strong>
+                </div>
+
+                <div class="metric">
+                    Machbarkeit
+                    <strong>20%</strong>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="usecase">
+
+            <div class="badge">B.02</div>
+
+            <h3>Automatisierte Gesprächszusammenfassung & -analyse</h3>
+
+            <p>Erstellt nach jedem Kundengespräch automatisch eine strukturierte Zusammenfassung, identifiziert Aufgaben und analysiert die Stimmung (Sentiment) des Kunden.</p>
+
+            <div class="metrics">
+
+                <div class="metric">
+                    Business
+                    <strong>72</strong>
+                </div>
+
+                <div class="metric">
+                    Komplexität
+                    <strong>50</strong>
+                </div>
+
+                <div class="metric">
+                    Machbarkeit
+                    <strong>40%</strong>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="usecase">
+
+            <div class="badge">B.06</div>
+
+            <h3>Intelligente Workshop-Dokumentation</h3>
+
+            <p>Automatische Analyse von unstrukturierten Dokumenten aus Workshops (z.B. Fotoprotokolle, Mitschriften), um Kernaussagen, Aufgaben und Entscheidungen zu extrahieren.</p>
+
+            <div class="metrics">
+
+                <div class="metric">
+                    Business
+                    <strong>54</strong>
+                </div>
+
+                <div class="metric">
+                    Komplexität
+                    <strong>34</strong>
+                </div>
+
+                <div class="metric">
+                    Machbarkeit
+                    <strong>90%</strong>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="usecase">
+
+            <div class="badge">B.03</div>
+
+            <h3>Self-Service Chatbot im Kundenportal</h3>
+
+            <p>Beantwortet wiederkehrende Kundenanfragen (z.B. Zählerstand, Abschlagsänderung, Rechnungsfragen) im Kundenportal 24/7 über einen intelligenten Chatbot.</p>
+
+            <div class="metrics">
+
+                <div class="metric">
+                    Business
+                    <strong>54</strong>
+                </div>
+
+                <div class="metric">
+                    Komplexität
+                    <strong>66</strong>
+                </div>
+
+                <div class="metric">
+                    Machbarkeit
+                    <strong>20%</strong>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="usecase">
+
+            <div class="badge">B.08</div>
+
+            <h3>Messung Emotionen Kunden</h3>
+
+            <p>Automatische Analyse von Kundenanrufen im Call Center zur Messung der Emotionen und der Kundenzufriedenheit in Echtzeit.</p>
+
+            <div class="metrics">
+
+                <div class="metric">
+                    Business
+                    <strong>54</strong>
+                </div>
+
+                <div class="metric">
+                    Komplexität
+                    <strong>66</strong>
+                </div>
+
+                <div class="metric">
+                    Machbarkeit
+                    <strong>20%</strong>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="usecase">
+
+            <div class="badge">B.09</div>
+
+            <h3>Recherche Agent (Internes Wissensmanagement)</h3>
+
+            <p>Ein KI-Assistent, der Call-Center-Agenten während eines Kundengesprächs in Echtzeit mit relevanten Informationen aus internen Wissensdatenbanken (z.B. DMS, SharePoint) versorgt.</p>
+
+            <div class="metrics">
+
+                <div class="metric">
+                    Business
+                    <strong>54</strong>
+                </div>
+
+                <div class="metric">
+                    Komplexität
+                    <strong>50</strong>
+                </div>
+
+                <div class="metric">
+                    Machbarkeit
+                    <strong>40%</strong>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="usecase">
+
+            <div class="badge">B.10</div>
+
+            <h3>Mail Agent (Automatisierte E-Mail-Bearbeitung)</h3>
+
+            <p>Ein KI-Agent, der eingehende Kunden-E-Mails automatisch analysiert, kategorisiert und Standardanfragen (z.B. Zählerstand, Adressänderung) selbstständig beantwortet oder zur Bearbei</p>
+
+            <div class="metrics">
+
+                <div class="metric">
+                    Business
+                    <strong>54</strong>
+                </div>
+
+                <div class="metric">
+                    Komplexität
+                    <strong>66</strong>
+                </div>
+
+                <div class="metric">
+                    Machbarkeit
+                    <strong>20%</strong>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="usecase">
+
+            <div class="badge">B.12</div>
+
+            <h3>Agentic AI für End-to-End Prozesse</h3>
+
+            <p>Einsatz von autonomen KI-Agenten, die komplexe, mehrstufige Prozesse wie das Onboarding eines Neukunden oder die Bearbeitung eines Umzugs von Anfang bis Ende selbstständig durchfüh</p>
+
+            <div class="metrics">
+
+                <div class="metric">
+                    Business
+                    <strong>54</strong>
+                </div>
+
+                <div class="metric">
+                    Komplexität
+                    <strong>66</strong>
+                </div>
+
+                <div class="metric">
+                    Machbarkeit
+                    <strong>20%</strong>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="usecase">
+
+            <div class="badge">D.03</div>
+
+            <h3>Systematische Wettbewerbsanalyse</h3>
+
+            <p>Automatisierter Abruf und Analyse von Informationen zu Produkten, Preisen und Marketingkampagnen von Wettbewerbern zur kontinuierlichen Marktbeobachtung.</p>
+
+            <div class="metrics">
+
+                <div class="metric">
+                    Business
+                    <strong>54</strong>
+                </div>
+
+                <div class="metric">
+                    Komplexität
+                    <strong>34</strong>
+                </div>
+
+                <div class="metric">
+                    Machbarkeit
+                    <strong>90%</strong>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="usecase">
+
+            <div class="badge">D.01</div>
+
+            <h3>Automatisierte Wettbewerbsanalyse</h3>
+
+            <p>Überwacht kontinuierlich die Websites, Produkte, Preise und Kommunikationsmaßnahmen der wichtigsten Wettbewerber und stellt die Informationen in einem Dashboard dar.</p>
+
+            <div class="metrics">
+
+                <div class="metric">
+                    Business
+                    <strong>54</strong>
+                </div>
+
+                <div class="metric">
+                    Komplexität
+                    <strong>34</strong>
+                </div>
+
+                <div class="metric">
+                    Machbarkeit
+                    <strong>90%</strong>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="usecase">
+
+            <div class="badge">D.02</div>
+
+            <h3>Kontinuierliches Trendmanagement</h3>
+
+            <p>Automatisiertes Scanning von Fachmedien, Patenten und Studien zur Früherkennung von Markttrends und technologischen Entwicklungen im Energiesektor.</p>
+
+            <div class="metrics">
+
+                <div class="metric">
+                    Business
+                    <strong>54</strong>
+                </div>
+
+                <div class="metric">
+                    Komplexität
+                    <strong>34</strong>
+                </div>
+
+                <div class="metric">
+                    Machbarkeit
+                    <strong>90%</strong>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="usecase">
+
+            <div class="badge">D.07</div>
+
+            <h3>Social Media Marken-Monitoring</h3>
+
+            <p>Echtzeit-Analyse von Social Media und anderen Online-Quellen zur Erfassung der Markenwahrnehmung, des Sentiments und zur Früherkennung von Krisen.</p>
+
+            <div class="metrics">
+
+                <div class="metric">
+                    Business
+                    <strong>54</strong>
+                </div>
+
+                <div class="metric">
+                    Komplexität
+                    <strong>34</strong>
+                </div>
+
+                <div class="metric">
+                    Machbarkeit
+                    <strong>60%</strong>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="usecase">
+
+            <div class="badge">A.06</div>
+
+            <h3>Intelligente Lead-Qualifizierung</h3>
+
+            <p>Automatisierte Analyse und Bewertung von neuen Leads aus verschiedenen Kanälen (z.B. Website, Energie-Coach), um deren Kaufbereitschaft für Energiedienstleistungen zu ermitteln und</p>
+
+            <div class="metrics">
+
+                <div class="metric">
+                    Business
+                    <strong>72</strong>
+                </div>
+
+                <div class="metric">
+                    Komplexität
+                    <strong>66</strong>
+                </div>
+
+                <div class="metric">
+                    Machbarkeit
+                    <strong>20%</strong>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="usecase">
+
+            <div class="badge">A.01</div>
+
+            <h3>Prädiktive Churn-Analyse & -Intervention</h3>
+
+            <p>Identifiziert abwanderungsgefährdete Kunden mittels KI und initiiert automatisierte, personalisierte Gegenmaßnahmen.</p>
+
+            <div class="metrics">
+
+                <div class="metric">
+                    Business
+                    <strong>72</strong>
+                </div>
+
+                <div class="metric">
+                    Komplexität
+                    <strong>66</strong>
+                </div>
+
+                <div class="metric">
+                    Machbarkeit
+                    <strong>20%</strong>
+                </div>
+
+            </div>
+
+        </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<div class="footer">
+EWV OneAI – Executive Use Case Landscape
+</div>
+
+<script>
+
+const useCases = [{"id": "B.05", "name": "Automatisierte E-Mail-Klassifizierung & -Verteilung", "project": "AI Service Assistant", "description": "Analysiert eingehende E-Mails im zentralen Postfach, klassifiziert das Anliegen (z.B. Vertragsfrage, Beschwerde) und leitet die E-Mail automatisch an das zuständige Team weiter.", "business": 72, "complexity": 34, "feasibility": 90, "ai": "Ein KI-Textklassifizierungsmodell wird auf Beispiele für verschiedene Anfrage-Typen trainiert, um die Intention einer neuen E-Mail automatisch zu erkennen."}, {"id": "B.04", "name": "KI-gestütztes internes Wissensmanagement", "project": "AI Service Assistant", "description": "Ein intelligenter Assistent ermöglicht Mitarbeitern (insb. im Call-Center) die schnelle und einfache Suche nach Informationen in internen Dokumenten (Anweisungen, Verträge, Prozesse) mittels natürlicher Sprache.", "business": 72, "complexity": 50, "feasibility": 60, "ai": "Die KI erstellt einen durchsuchbaren Index (Semantic Index) des gesamten Wissens. Bei einer Anfrage versteht die KI die Bedeutung und findet die relevanteste Textpassage, anstatt nur nach Stichwörtern zu suchen."}, {"id": "B.01", "name": "Real-Time Agent Assist im Call-Center", "project": "AI Service Assistant", "description": "Unterstützt Call-Center-Agenten während des Gesprächs in Echtzeit mit relevanten Informationen, Antworten und Handlungsempfehlungen aus dem internen Wissensmanagement.", "business": 72, "complexity": 66, "feasibility": 20, "ai": "Die KI transkribiert das Gespräch live. Natural Language Understanding (NLU) identifiziert das Kundenanliegen und sucht mittels semantischer Suche in der Wissensdatenbank nach der besten Antwort."}, {"id": "B.02", "name": "Automatisierte Gesprächszusammenfassung & -analyse", "project": "AI Service Assistant", "description": "Erstellt nach jedem Kundengespräch automatisch eine strukturierte Zusammenfassung, identifiziert Aufgaben und analysiert die Stimmung (Sentiment) des Kunden.", "business": 72, "complexity": 50, "feasibility": 40, "ai": "Large Language Models (LLMs) werden für die Zusammenfassung (Summarization), die Extraktion von Aufgaben (Action Item Extraction) und die Analyse der Stimmung (Sentiment Analysis) eingesetzt."}, {"id": "B.06", "name": "Intelligente Workshop-Dokumentation", "project": "AI Service Assistant", "description": "Automatische Analyse von unstrukturierten Dokumenten aus Workshops (z.B. Fotoprotokolle, Mitschriften), um Kernaussagen, Aufgaben und Entscheidungen zu extrahieren.", "business": 54, "complexity": 34, "feasibility": 90, "ai": "OCR zur Texterkennung auf Fotos. NLU/NLP zur Identifikation von Entitäten (Personen, Aufgaben, Termine) und zur inhaltlichen Zusammenfassung der Ergebnisse mittels GenKI."}, {"id": "B.03", "name": "Self-Service Chatbot im Kundenportal", "project": "AI Service Assistant", "description": "Beantwortet wiederkehrende Kundenanfragen (z.B. Zählerstand, Abschlagsänderung, Rechnungsfragen) im Kundenportal 24/7 über einen intelligenten Chatbot.", "business": 54, "complexity": 66, "feasibility": 20, "ai": "Der Chatbot nutzt Natural Language Understanding (NLU), um die Absicht des Kunden zu verstehen. Über APIs kann er Daten abrufen (z.B. aktuellen Abschlag) oder Aktionen ausführen (z.B. Bankverbindung ändern)."}, {"id": "B.08", "name": "Messung Emotionen Kunden", "project": "AI Service Assistant", "description": "Automatische Analyse von Kundenanrufen im Call Center zur Messung der Emotionen und der Kundenzufriedenheit in Echtzeit.", "business": 54, "complexity": 66, "feasibility": 20, "ai": "Speech-to-Text zur Transkription. NLP und Audio-Analyse zur Erkennung von Emotionen (z.B. Freude, Ärger, Enttäuschung) und zur Sentiment-Analyse."}, {"id": "B.09", "name": "Recherche Agent (Internes Wissensmanagement)", "project": "AI Service Assistant", "description": "Ein KI-Assistent, der Call-Center-Agenten während eines Kundengesprächs in Echtzeit mit relevanten Informationen aus internen Wissensdatenbanken (z.B. DMS, SharePoint) versorgt.", "business": 54, "complexity": 50, "feasibility": 40, "ai": "Natural Language Understanding (NLU) zur Interpretation der Agenten-Frage. Information Retrieval zum Auffinden relevanter Dokumente. GenKI zur Generierung einer prägnanten Antwort."}, {"id": "B.10", "name": "Mail Agent (Automatisierte E-Mail-Bearbeitung)", "project": "AI Service Assistant", "description": "Ein KI-Agent, der eingehende Kunden-E-Mails automatisch analysiert, kategorisiert und Standardanfragen (z.B. Zählerstand, Adressänderung) selbstständig beantwortet oder zur Bearbeitung weiterleitet.", "business": 54, "complexity": 66, "feasibility": 20, "ai": "Natural Language Understanding (NLU) zur Erkennung der Kundenabsicht. Named Entity Recognition (NER) zur Extraktion von Daten (z.B. Kundennummer, Zählerstand). Workflow Automation."}, {"id": "B.12", "name": "Agentic AI für End-to-End Prozesse", "project": "AI Service Assistant", "description": "Einsatz von autonomen KI-Agenten, die komplexe, mehrstufige Prozesse wie das Onboarding eines Neukunden oder die Bearbeitung eines Umzugs von Anfang bis Ende selbstständig durchführen.", "business": 54, "complexity": 66, "feasibility": 20, "ai": "Agentic AI, Large Language Models (LLM) für Planung und Reasoning, Robotic Process Automation (RPA), API-Integration."}, {"id": "D.03", "name": "Systematische Wettbewerbsanalyse", "project": "AI Trend Analytics & Customer Monitoring", "description": "Automatisierter Abruf und Analyse von Informationen zu Produkten, Preisen und Marketingkampagnen von Wettbewerbern zur kontinuierlichen Marktbeobachtung.", "business": 54, "complexity": 34, "feasibility": 90, "ai": "GenKI zur Zusammenfassung von Wettbewerbsstrategien. Maschinelles Lernen zur Erkennung von Preisänderungen und neuen Produktmerkmalen aus Website-Daten."}, {"id": "D.01", "name": "Automatisierte Wettbewerbsanalyse", "project": "AI Trend Analytics & Customer Monitoring", "description": "Überwacht kontinuierlich die Websites, Produkte, Preise und Kommunikationsmaßnahmen der wichtigsten Wettbewerber und stellt die Informationen in einem Dashboard dar.", "business": 54, "complexity": 34, "feasibility": 90, "ai": "Web-Scraping-Tools sammeln die Rohdaten. KI-Komponenten können unstrukturierte Texte (z.B. Produktbeschreibungen) analysieren, um neue Features oder Verkaufsargumente zu identifizieren."}, {"id": "D.02", "name": "Kontinuierliches Trendmanagement", "project": "AI Trend Analytics & Customer Monitoring", "description": "Automatisiertes Scanning von Fachmedien, Patenten und Studien zur Früherkennung von Markttrends und technologischen Entwicklungen im Energiesektor.", "business": 54, "complexity": 34, "feasibility": 90, "ai": "GenKI zur Zusammenfassung von langen Dokumenten und zur Generierung von Trend-Reports. NLP zur Themen- und Entitätserkennung."}, {"id": "D.07", "name": "Social Media Marken-Monitoring", "project": "AI Trend Analytics & Customer Monitoring", "description": "Echtzeit-Analyse von Social Media und anderen Online-Quellen zur Erfassung der Markenwahrnehmung, des Sentiments und zur Früherkennung von Krisen.", "business": 54, "complexity": 34, "feasibility": 60, "ai": "NLP zur Sentiment-Analyse und Themenextraktion aus Tausenden von Online-Beiträgen. Anomalie-Erkennung zur Identifikation von Stimmungs- oder Volumenschwankungen."}, {"id": "A.06", "name": "Intelligente Lead-Qualifizierung", "project": "AI Trend Analytics & Customer Monitoring", "description": "Automatisierte Analyse und Bewertung von neuen Leads aus verschiedenen Kanälen (z.B. Website, Energie-Coach), um deren Kaufbereitschaft für Energiedienstleistungen zu ermitteln und zu priorisieren.", "business": 72, "complexity": 66, "feasibility": 20, "ai": "Predictive Analytics (Machine Learning) zur Berechnung eines Lead Scores. Prozessautomatisierung zur Weiterleitung und Zuweisung der Leads. Agentic AI könnte den Prozess von Analyse bis zur Terminvorschlag-Mail autonom steuern."}, {"id": "A.01", "name": "Prädiktive Churn-Analyse & -Intervention", "project": "AI Trend Analytics & Customer Monitoring", "description": "Identifiziert abwanderungsgefährdete Kunden mittels KI und initiiert automatisierte, personalisierte Gegenmaßnahmen.", "business": 72, "complexity": 66, "feasibility": 20, "ai": "Ein Machine-Learning-Modell erkennt Muster, die auf eine Kündigungsabsicht hindeuten. Generative KI erstellt personalisierte E-Mails oder Gesprächsleitfäden für das Call-Center."}];
+
+new Chart(document.getElementById('bubbleChart'), {
+
+    type:'bubble',
+
+    data:{
+        datasets:[{
+            label:'Use Cases',
+            data:useCases.map(u => ({
+                x:u.complexity,
+                y:u.business,
+                r:Math.max(12, u.feasibility / 3),
+                label:u.name
+            })),
+            backgroundColor:'rgba(0,107,63,0.35)',
+            borderColor:'#006b3f',
+            borderWidth:1.5,
+            hoverBorderWidth:2
+        }]
+    },
+
+    options:{
+
+        layout:{
+            padding:20
+        },
+
+        plugins:{
+            legend:{
+                display:false
+            },
+
+            tooltip:{
+                backgroundColor:'#0f172a',
+                padding:14,
+                cornerRadius:14,
+                callbacks:{
+                    label:function(context){
+                        const raw = context.raw;
+
+                        return [
+                            raw.label,
+                            'Business Value: ' + raw.y,
+                            'Komplexität: ' + raw.x
+                        ];
+                    }
+                }
+            }
+        },
+
+        scales:{
+            x:{
+                min:5,
+                max:95,
+                ticks:{
+                    stepSize:10
+                },
+                grid:{
+                    color:'rgba(0,0,0,0.04)'
+                },
+                title:{
+                    display:true,
+                    text:'Technische Komplexität'
+                }
+            },
+
+            y:{
+                min:10,
+                max:100,
+                ticks:{
+                    stepSize:10
+                },
+                grid:{
+                    color:'rgba(0,0,0,0.04)'
+                },
+                title:{
+                    display:true,
+                    text:'Business Value'
+                }
+            }
+        }
+    }
+});
+
+</script>
+
+</body>
+</html>
