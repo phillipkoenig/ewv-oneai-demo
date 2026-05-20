@@ -1,1 +1,323 @@
+<!DOCTYPE html>
+<html lang="de" xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EWV OneAI Hub</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{box-sizing:border-box;}
+
+body{
+    margin:0;
+    font-family:'Inter',sans-serif;
+    background:#f4f8f2;
+    color:#1f2937;
+}
+
+.hero{
+    padding:90px 70px 110px;
+    background:
+    radial-gradient(circle at top right, rgba(255,255,255,0.12), transparent 28%),
+    linear-gradient(135deg,#005c36,#7db928);
+    color:white;
+}
+
+.hero h1{
+    margin:0;
+    font-size:68px;
+    letter-spacing:-2px;
+}
+
+.hero p{
+    margin-top:22px;
+    max-width:920px;
+    line-height:1.8;
+    font-size:20px;
+}
+
+.main{
+    padding:0 40px 60px;
+    margin-top:-55px;
+}
+
+.kpi-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    gap:24px;
+}
+
+.kpi-card{
+    background:white;
+    border-radius:30px;
+    padding:30px;
+    box-shadow:0 18px 38px rgba(0,0,0,0.08);
+}
+
+.kpi-title{
+    color:#64748b;
+    font-size:14px;
+}
+
+.kpi-value{
+    margin-top:12px;
+    font-size:52px;
+    font-weight:700;
+    color:#006b3f;
+}
+
+.section{
+    margin-top:36px;
+}
+
+.panel{
+    background:white;
+    border-radius:34px;
+    padding:34px;
+    box-shadow:0 18px 38px rgba(0,0,0,0.06);
+}
+
+.panel h2{
+    margin-top:0;
+    color:#006b3f;
+    font-size:34px;
+}
+
+.panel p{
+    color:#64748b;
+    line-height:1.8;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(340px,1fr));
+    gap:26px;
+    margin-top:26px;
+}
+
+.card{
+    position:relative;
+    overflow:hidden;
+    border-radius:28px;
+    padding:30px;
+    min-height:280px;
+    color:white;
+    text-decoration:none;
+    transition:0.25s;
+    display:block;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.card:before{
+    content:"";
+    position:absolute;
+    width:240px;
+    height:240px;
+    border-radius:50%;
+    background:rgba(255,255,255,0.08);
+    top:-80px;
+    right:-80px;
+}
+
+.card h3{
+    position:relative;
+    z-index:2;
+    margin-top:20px;
+    font-size:32px;
+}
+
+.card p{
+    position:relative;
+    z-index:2;
+    line-height:1.7;
+    color:white;
+    opacity:0.96;
+}
+
+.tag{
+    position:relative;
+    z-index:2;
+    display:inline-block;
+    padding:8px 14px;
+    border-radius:20px;
+    background:rgba(255,255,255,0.14);
+    font-size:12px;
+    font-weight:600;
+}
+
+.link{
+    position:absolute;
+    bottom:28px;
+    left:30px;
+    z-index:2;
+    font-weight:700;
+    color:white;
+    letter-spacing:0.2px;
+}
+
+.strategy{
+    background:linear-gradient(135deg,#005c36,#008f54);
+}
+
+.enablement{
+    background:linear-gradient(135deg,#0f172a,#334155);
+}
+
+.portfolio{
+    background:linear-gradient(135deg,#0b6efd,#3db8e6);
+}
+
+.footer{
+    text-align:center;
+    padding:36px;
+    color:#94a3b8;
+    font-size:14px;
+}
+
+@media(max-width:900px){
+
+.hero{
+    padding:60px 30px 90px;
+}
+
+.hero h1{
+    font-size:44px;
+}
+
+.main{
+    padding:0 18px 40px;
+}
+
+}
+</style>
+
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:_dlc_DocId msdt:dt="string">A52FXUC2W4AK-226576097-6857</mso:_dlc_DocId>
+<mso:_dlc_DocIdItemGuid msdt:dt="string">f980e41b-34e1-4126-a960-a372166e4a6e</mso:_dlc_DocIdItemGuid>
+<mso:_dlc_DocIdUrl msdt:dt="string">https://ewvcloud.sharepoint.com/sites/A_G-I_Teams/_layouts/15/DocIdRedir.aspx?ID=A52FXUC2W4AK-226576097-6857, A52FXUC2W4AK-226576097-6857</mso:_dlc_DocIdUrl>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+
+<body>
+
+<div class="hero">
+
+<h1>EWV OneAI</h1>
+
+<p>
+Zentrale Navigation der strategischen OneAI-Initiativen der EWV.
+Die Plattform verbindet Zielarchitektur, organisatorisches Enablement,
+Use-Case-Portfolios sowie AI-native Service- und Wissenslösungen
+innerhalb einer gemeinsamen Enterprise-AI-Vision.
+</p>
+
+</div>
+
+<div class="main">
+
+<div class="kpi-grid">
+
+<div class="kpi-card">
+<div class="kpi-title">Strategische Zielbilder</div>
+<div class="kpi-value">3</div>
+</div>
+
+<div class="kpi-card">
+<div class="kpi-title">OneAI Fokus</div>
+<div class="kpi-value">AI</div>
+</div>
+
+<div class="kpi-card">
+<div class="kpi-title">Transformation</div>
+<div class="kpi-value">360°</div>
+</div>
+
+<div class="kpi-card">
+<div class="kpi-title">Enablement & Governance</div>
+<div class="kpi-value">Core</div>
+</div>
+
+</div>
+
+<div class="section panel">
+
+<h2>OneAI Navigation Hub</h2>
+
+<p>
+Die folgenden Bereiche bilden gemeinsam die strategische EWV OneAI Landschaft.
+Von der Zielarchitektur über organisatorisches Enablement bis hin zur Bewertung
+konkreter KI-Use-Cases entsteht eine integrierte Enterprise-AI-Plattform.
+</p>
+
+<div class="cards">
+
+<a class="card strategy"
+href="https://phillipkoenig.github.io/ewv-oneai/Konzept/index.html" target="_blank">
+
+<div class="tag">Strategische Zielarchitektur</div>
+
+<h3>OneAI Konzept</h3>
+
+<p>
+Überblick über die strategische OneAI Zielvision,
+Plattformarchitektur, Wissensräume, Agentic-AI-Ansätze
+sowie zentrale Business Use Cases.
+</p>
+
+<div class="link">→ Konzept öffnen</div>
+
+</a>
+
+<a class="card enablement"
+href="https://phillipkoenig.github.io/ewv-oneai/Enablement-Program/index.html" target="_blank">
+
+<div class="tag">Transformation & Organisation</div>
+
+<h3>Enablement Program</h3>
+
+<p>
+Darstellung des organisatorischen Enablements,
+Governance-Ansätze, Trainings, AI Adoption,
+Change Management und zukünftiger AI Operating Models.
+</p>
+
+<div class="link">→ Enablement öffnen</div>
+
+</a>
+
+<a class="card portfolio"
+href="https://phillipkoenig.github.io/ewv-oneai/Projektbewertung/index.html" target="_blank">
+
+<div class="tag">Portfolio & Priorisierung</div>
+
+<h3>Projektbewertung</h3>
+
+<p>
+Visualisierung und Bewertung der identifizierten
+KI- und Digitalisierungsinitiativen anhand von
+Business Value, Komplexität und strategischem Nutzen.
+</p>
+
+<div class="link">→ Portfolio öffnen</div>
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="footer">
+EWV OneAI – Enterprise AI Navigation Hub
+</div>
+
+</body>
+</html>
